@@ -90,6 +90,232 @@ My colleagues at The New York Times, for countless suggestions, bug reports and 
 Mark Harrower, for collaborating on the original "MapShaper" program at the University of Wisconsin&ndash;Madison.
 
 ### 本地运行
+进入mapshaper根路径37
+
+**Web interface**
+
+38
+
+
+
+39
+
+Firefox is able to load Shapefiles and GeoJSON files larger than 1GB. Chrome has improved in recent versions, but is still prone to out-of-memory errors when importing files larger than several hundred megabytes.
+
+40
+
+
+
+41
+
+**Command line interface**
+
+42
+
+
+
+43
+
+When working with very large files, mapshaper may become unresponsive or crash with the message "JavaScript heap out of memory."
+
+44
+
+
+
+45
+
+One option is to run `mapshaper-xl` (added in v0.4.63), which allocates more memory than the standard `mapshaper` program.
+
+46
+
+
+
+47
+
+Another solution is to run Node directly with the `--max-old-space-size` option. The following example (Mac or Linux) allocates 8GB of memory:
+
+48
+
+```bash
+
+49
+
+$ node  --max-old-space-size=8192 `which mapshaper` <mapshaper commands>
+
+50
+
+```
+
+51
+
+
+
+52
+
+### Installation
+
+53
+
+
+
+54
+
+Mapshaper requires [Node.js](http://nodejs.org).
+
+55
+
+
+
+56
+
+With Node installed, you can install the latest release version of mapshaper using npm. Install with the "-g" flag to make the executable scripts available systemwide.
+
+57
+
+
+
+58
+
+```bash
+
+59
+
+npm install -g mapshaper
+
+60
+
+```
+
+61
+
+
+
+62
+
+To install and run the latest development code from github:
+
+63
+
+
+
+64
+
+```bash
+
+65
+
+git clone git@github.com:mbloch/mapshaper.git
+
+66
+
+cd mapshaper
+
+67
+
+npm install
+
+68
+
+bin/mapshaper     # run the command line program
+
+69
+
+bin/mapshaper-gui # use the web UI locally
+
+70
+
+```
+
+71
+
+
+
+72
+
+### Building and testing
+
+73
+
+
+
+74
+
+Run the `build` script to build both the cli and web UI modules.
+
+75
+
+
+
+76
+
+Run `npm test` in the project directory to run mapshaper's tests.
+
+77
+
+
+
+78
+
+### License
+
+79
+
+
+
+80
+
+This software is licensed under [MPL 2.0](http://www.mozilla.org/MPL/2.0/).
+
+81
+
+
+
+82
+
+According to Mozilla's [FAQ](http://www.mozilla.org/MPL/2.0/FAQ.html), "The MPL's ‘file-level’ copyleft is designed to encourage contributors to share modifications they make to your code, while still allowing them to combine your code with code under other licenses (open or proprietary) with minimal restrictions."
+
+83
+
+
+
+84
+
+
+
+85
+
+
+
+86
+
+### Acknowledgements
+
+87
+
+
+
+88
+
+My colleagues at The New York Times, for countless suggestions, bug reports and general helpfulness.
+
+89
+
+
+
+90
+
+Mark Harrower, for collaborating on the original "MapShaper" program at the University of Wisconsin&ndash;Madison.
+
+91
+
+
+
+92
+
+### 本地运行
+
+93
+
 进入mapshaper根路径
 1、安装依赖
 执行：npm install
