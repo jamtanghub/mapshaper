@@ -89,7 +89,7 @@ My colleagues at The New York Times, for countless suggestions, bug reports and 
 
 Mark Harrower, for collaborating on the original "MapShaper" program at the University of Wisconsin&ndash;Madison.
 
-###本地运行
+### 本地运行
 进入mapshaper根路径
 1、安装依赖
 执行：npm install
