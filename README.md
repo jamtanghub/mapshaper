@@ -316,12 +316,12 @@ Mark Harrower, for collaborating on the original "MapShaper" program at the Univ
 
 93
 
-进入mapshaper根路径
-1、安装依赖
+ 进入mapshaper根路径
+1. 安装依赖
 执行：npm install
-2、编译：
+2. 编译：
 执行： node build
-3、运行web服务：
+3. 运行web服务：
 执行： node bin/mapshaper-gui  
 运行成功后会自动打开默认浏览器：http://localhost:5555/ 
 
